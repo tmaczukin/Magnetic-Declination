@@ -63,4 +63,4 @@ def layout_map_mag_dec(layout_map, feature, parent):
     xform = QgsCoordinateTransform(crs, wgs84, transformContext)
 
     new_point = xform.transform(my_point)
-    return GeoMag().GeoMag(new_point.x(), new_point.y(), h=altitude, time=my_date).dec
+    return GeoMag().GeoMag(new_point.y(), new_point.x(), h=altitude, time=my_date).dec
